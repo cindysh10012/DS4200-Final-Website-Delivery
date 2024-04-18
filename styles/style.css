@@ -1,11 +1,13 @@
 body {
-  font-family: Arial;
-  text-align: center;
-  background-color: lightgrey; /* Add this line */
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+  border: 3px solid black;
 }
 h1 {
-  font-size: 23px;
-  font-weight: bold;
+  margin: 0;
+  padding: 20px 0;
+  color: black;
   text-align: center;
 }
 h2 {
@@ -17,8 +19,7 @@ p {
   font-size: 11px;
   text-align: center;
 }
-img {
-  width: 100%;
-  height: auto;
-  text-align: center;
+.img {
+  flex: 0 0 65%; /* Don't allow the image to grow or shrink */
+  margin-right: 20px; /* Add some space between image and text */
 }
