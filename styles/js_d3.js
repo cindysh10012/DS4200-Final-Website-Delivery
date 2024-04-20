@@ -41,7 +41,10 @@ d3.csv("merged_data_for_d3.csv").then(function(data) {
             },
             label: nodeLabels,
             color: nodeColors, // Assign node colors based on industries
-            hovertemplate: '%{label}'
+            hovertemplate: '%{label}',
+            font: {  // Add this property
+                size: 6  // Adjust this to your desired font size
+            }
         },
         link: {
             source: sources,
