@@ -42,8 +42,8 @@ d3.csv("merged_data_for_d3.csv").then(function(data) {
             label: nodeLabels,
             color: nodeColors, // Assign node colors based on industries
             hovertemplate: '%{label}',
-            font: {  // Add this property
-                size: 6  // Adjust this to your desired font size
+            font: { // Add this property
+                size: 10 // Adjust this value to shrink or enlarge the text size
             }
         },
         link: {
@@ -91,3 +91,19 @@ d3.csv("merged_data_for_d3.csv").then(function(data) {
 }).catch(function(error) {
     console.log('Error loading data:', error);
 });
+
+
+// Add the zoom functionality here
+let scale = 1;
+
+function zoomIn() {
+    scale += 0.1;
+    document.getElementById('sankey-diagram').style.transform = `scale(${scale})`;
+}
+
+function zoomOut() {
+    if (scale > 0.1) {
+        scale -= 0.1;
+        document.getElementById('sankey-diagram').style.transform = `scale(${scale})`;
+    }
+}
